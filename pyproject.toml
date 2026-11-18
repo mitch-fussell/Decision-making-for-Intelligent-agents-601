@@ -13,7 +13,19 @@ dependencies = [
     "ipykernel>=6.29",
     "jupyter>=1.0",
     "ortools>=9.15.6755",
+    "torch>=2.15.0",
+    "gymnasium[classic-control]>=1.4.0",
+    "stable-baselines3>=2.9.2",
+    "pandas>=3.0.6",
 ]
 
 [tool.uv]
 package = false
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
